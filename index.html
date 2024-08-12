@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <link rel="stylesheet" href="design/index.css">
+  <script defer src="design/index.js"></script>
+</head>
+
+<body>
+  <main class="mainWrapper">
+    <!-- Sidebar start -->
+    <aside class="steps sidebar">
+      <div class="step one">
+        <div class="ring" id="ring1">1</div>
+        <div class="stepinfo">
+          <span>Step 1</span>
+          <span>Your info</span>
+        </div>
+      </div>
+      <div class="step two">
+        <div class="ring" id="ring2">2</div>
+        <div class="stepinfo">
+          <span>Step 2</span>
+          <span>Select plan</span>
+        </div>
+      </div>
+      <div class="step three">
+        <div class="ring" id="ring3">3</div>
+        <div class="stepinfo">
+          <span>Step 3</span>
+          <span>Add-ons</span>
+        </div>
+      </div>
+      <div class="step four">
+        <div class="ring" id="ring4">4</div>
+        <div class="stepinfo">
+          <span>Step 4</span>
+          <span>Summary</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sidebar end -->
+
+    <!-- Step 1 start -->
+    <div class="sectionandbutton">
+      <section class="sectionWrapper">
+        <div class="boxWrapper" id="itemOne">
+          <section class="mainbox mainone">
+            <p class="boldheader">Personal info</p>
+            <p class="subheader">Please provide your name, email address, and phone number.</p>
+            <form class="form">
+              <div class="formItem">
+                <label>Name</label>
+                <input type="text" required placeholder="e.g. Stephen King">
+              </div>
+              <div class="formItem">
+                <label>Email Address</label>
+                <input type="email" required placeholder="e.g. stephenking@lorem.com">
+              </div>
+              <div class="formItem">
+                <label>Phone Number</label>
+                <input type="tel" required placeholder="e.g. +1 234 567 890">
+              </div>
+            </form>
+          </section>
+        </div>
+        <!-- Step 1 end -->
+
+        <!-- Step 2 start -->
+        <div class="boxWrapper" id="itemTwo">
+          <section class="mainbox maintwo">
+            <p class="boldheader">Select your plan</p>
+            <p class="subheader">You have the option of monthly or yearly billing.</p>
+            <div class="plan" data-duration="monthly">
+              <div class="subplan" id="arcade">
+                <div class="planinfo">
+                  <p class="planTitle">Arcade</p>
+                  <p class="planPrice">$<span class="month">9/mo</span><span class="year">90/yr</span></p>
+                  <span class="year small">2 months free</span>
+                </div>
+              </div>
+              <div class="subplan" id="advanced">
+                <div class="planinfo">
+                  <p class="planTitle">Advanced</p>
+                  <p class="planPrice">$<span class="month">12/mo</span><span class="year">120/yr</span></p>
+                  <span class="year small">2 months free</span>
+                </div>
+              </div>
+              <div class="subplan" id="pro">
+                <div class="planinfo">
+                  <p class="planTitle">Pro</p>
+                  <p class="planPrice">$<span class="month">15/mo</span><span class="year">150/yr</span></p>
+                  <span class="year small">2 months free</span>
+                </div>
+
+              </div>
+            </div>
+            <div class="planduration" data-duration="monthly">
+              <p class="monthly">Monthly</p>
+              <div class="flip">
+                <div class="circle"></div>
+              </div>
+              <p class="yearly">Yearly</p>
+            </div>
+          </section>
+        </div>
+        <!-- Step 2 end -->
+
+        <!-- Step 3 start -->
+        <div class="boxWrapper" id="itemThree">
+          <section class="mainbox mainthree">
+            <p class="boldheader">Pick add-ons</p>
+            <p class="subheader">Add-ons help enhance your gaming experience.</p>
+            <section class="options" data-duration="monthly">
+              <section class="option" id="onlineservice">
+                <input type="checkbox">
+                <div class="optionInfo">
+                  <div class="optionTitle">Online service</div>
+                  <div class="optionDesc">Access to multiplayer games</div>
+                </div>
+                <div class="pricing">+$<span class="month">1/mo</span><span class="year">10/yr</span></div>
+              </section>
+              <section class="option" id="largerstorage">
+                <input type="checkbox">
+                <div class="optionInfo">
+                  <div class="optionTitle">Larger storage</div>
+                  <div class="optionDesc">Extra 1TB of cloud save</div>
+                </div>
+                <div class="pricing">+$<span class="month">2/mo</span><span class="year">20/yr</span></div>
+              </section>
+              <section class="option" id="customprofile">
+                <input type="checkbox">
+                <div class="optionInfo">
+                  <div class="optionTitle">Customizable Profile</div>
+                  <div class="optionDesc">Custom theme on your profile</div>
+                </div>
+                <div class="pricing">+$<span class="month">2/mo</span><span class="year">20/yr</span></div>
+              </section>
+            </section>
+          </section>
+        </div>
+        <!-- Step 3 end -->
+
+        <!-- Step 4 start -->
+        <div class="boxWrapper" id="itemFour">
+          <section class="mainbox mainfour">
+            <p class="boldheader">Finishing up</p>
+            <p class="subheader">Double-check everything looks OK before confirming.</p>
+
+            <!-- Dynamically add subscription and add-on selections here -->
+            <div class="details" data-duration="monthly">
+              <div class=detailsandprice>
+                <div class="detailsWrapper">
+                  <div class="package" id="package">
+                    <div id="packageName">Arcade</div>
+                    <div id="packageDuration">(Monthly)</div>
+                  </div>
+                  <div class="totwo">Change</div>
+                </div>
+                <div class="priceWrapper">
+                  <span>$</span><span id="subprice"></span><span class="month">/mo</span><span class="year">/yr</span>
+                </div>
+              </div>
+              <div class="extras">
+                <!-- <div class="extra">
+                  <div class="extraName">Online service</div>
+                  <div class="extraPrice"><span>+$</span><span></span><span class="month">/mo</span><span class="year">/yr</span></div>
+                </div> -->
+              </div>
+              <div class='total'><span class='rest'>Total (per <span class="month">month</span><span class='year'>year</span>)</span> <span id='totalprice'>+$12/mo</span></div>
+            </div>
+          </section>
+        </div>
+        <!-- Step 4 end -->
+
+        <!-- Step 5 start -->
+        <div class="boxWrapper" id="itemFive">
+          <section class="mainbox mainfive">
+            <img alt="completion logo" src='assets/images/icon-thank-you.svg'>
+
+            <p class='thankyou'>Thank you!</p>
+            
+            <p class='thanktext'>Thanks for confirming your subscription! We hope you have fun
+            using our platform. If you ever need support, please feel free
+            to email us at support@loremgaming.com.</p>
+          </section>
+        </div>
+        <!-- Step 5 end -->
+      </section>
+      <div class="buttonContainer">
+        <button id="backward" tabindex="0" class="show">Go Back</button>
+        <button id="forward" tabindex="0" class="nextstep show">Next Step</button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
