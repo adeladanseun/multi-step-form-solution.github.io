@@ -377,6 +377,7 @@
         border-radius: 10px;
     }
     .mainWrapper .sidebar {
+        background: url('../assets/images/bg-sidebar-desktop.svg');
         background-color: white;
         height: auto;
         flex-direction: column;
